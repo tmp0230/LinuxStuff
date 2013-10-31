@@ -76,7 +76,7 @@ $ sudo make install
 ### Change settings in Sound Card
 - Input `alsamixer`, and input **[F6]** to select sound card:
 <pre><code>$ alsamixer</code></pre>
-![alsamixer](https://github.com/woainvzu/MarsloLinuxStuff/blob/master/Screenshots/alsamixer.png?raw=true)
+![alsamixer](https://github.com/Marslo/LinuxStuff/blob/master/Screenshots/alsamixer.png?raw=true)
 - Startup Settings
 <pre><code>Name£º [Everything_You_Want]
 Command: /sbin/alsactl restore
@@ -84,6 +84,6 @@ Command: /sbin/alsactl restore
 
 ##Screenshot
 #BASH
-![BASH](https://github.com/woainvzu/BASH_Aalias_Marslo/blob/master/Screenshots/BASH_Screenshot.png?raw=true)
+![BASH](https://github.com/Marslo/LinuxStuff/blob/master/Screenshots/BASH_Screenshot.png?raw=true)
 #MAN Page
-![MAN_PAGE](https://github.com/woainvzu/BASH_Aalias_Marslo/blob/master/Screenshots/Colorful_ManPage_Screenshot.png?raw=true)
+![MAN_PAGE](https://github.com/Marslo/LinuxStuff/blob/master/Screenshots/Colorful_ManPage_Screenshot.png?raw=true)
