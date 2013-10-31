@@ -1,0 +1,56 @@
+alias cx='chmod u+x'
+alias c='clear'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias d='cd -'
+
+alias grep='grep -i --color=auto'
+alias egrep='egrep -i --color=auto'
+
+alias ls='ls --color=always -NF'
+alias la='ls -altr --color=always -NF'
+alias ll='ls -lthr --color=always -NF'
+alias l='ls -lthr --color=always -NF'
+
+alias mec='cd /home/marslo/Study/Ruby/Mechanize'
+alias mf='cd /home/marslo/Study/MakeFile'
+alias sp='cd /home/marslo/scm/tex/src/spec'
+alias li='cd /opt/tex/lib'
+alias rs='cd /home/marslo/Study/Rails'
+alias gi='cd /home/marslo/Tools/Git'
+
+alias subl='/home/marslo/Tools/Editor/Sublime2/sublime_text'
+alias sublime='/home/marslo/Tools/Editor/Sublime2/sublime_text'
+alias is='irb --simple-prompt'
+alias ff=firefox
+alias uh='du -h --max-depth=1 --exclude='\./\.*''
+alias ud='du -h --max-depth=1'
+alias vnccreate="vncserver $1 -name marslo -geometry 1280x1024"
+alias lmsq='mysql --auto-rehash -u root -p'
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+alias mpp='ssh mpp@10.9.137.13'
+alias rodachu='ssh root@10.9.137.11'
+alias azrod='ssh mpp@10.9.137.9'
+alias tex='ssh tex@10.9.137.13'
+alias at='ssh auto@10.121.122.56'
+alias mika='ssh mika@10.121.122.56'
+
+export LESS_TERMCAP_mb=$(printf "\e[1;31m") 
+export LESS_TERMCAP_md=$(printf "\e[1;31m") 
+export LESS_TERMCAP_me=$(printf "\e[0m") 
+export LESS_TERMCAP_se=$(printf "\e[0m") 
+export LESS_TERMCAP_so=$(printf "\e[1;44;33m") 
+export LESS_TERMCAP_ue=$(printf "\e[0m") 
+export LESS_TERMCAP_us=$(printf "\e[1;32m") 
+
+export PATH=/home/mika/software/bin:$PATH
+export PATH=$PATH:/home/marslo/Tools/NodeJS/bin:/home/marslo/Tools/Bins
+export PATH=/home/marslo/.vim/tools/vim74/bin:$PATH
+
+export DISPLAY=WW2002855.ap.tieto.com:0.0
+PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"

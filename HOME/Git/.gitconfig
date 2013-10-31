@@ -13,3 +13,4 @@
 	pl = pull
 	info = echo "Remote URL: " git remote -v
 	ci = commit -am
+    add = add --all
