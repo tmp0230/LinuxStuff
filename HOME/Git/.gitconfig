@@ -1,0 +1,15 @@
+[user]
+	name = woainvzu
+	email = marslo.vida@gmail.com
+[push]
+	default = matching
+[color]
+	diff = always
+	log = always
+[alias]
+	plogs = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit
+	plog = log --max-count=3 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit
+	st = status
+	pl = pull
+	info = echo "Remote URL: " git remote -v
+	ci = commit -am
