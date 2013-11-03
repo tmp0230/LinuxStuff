@@ -1,16 +1,24 @@
 [user]
-	name = woainvzu
-	email = marslo.vida@gmail.com
+	name = Marslo
+	email = marslo.jiao@gmail.com
 [push]
 	default = matching
 [color]
-	diff = always
-	log = always
+    diff = always
+    log = always
+    status = always
+    add = always
+    push = always
+    pull = always
+    branch = always
+[core]
+	editor = vim
 [alias]
-	plogs = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit
-	plog = log --max-count=3 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit
-	st = status
-	pl = pull
-	info = echo "Remote URL: " git remote -v
-	ci = commit -am
-    add = add --all
+    plogs = log --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
+    plog = log --max-count=3 --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
+    flog = log -p --graph\n --color --graph
+    st = status
+    pl = pull
+    ci = commit -am
+    co = checkout
+    fdiff = diff --name-status
