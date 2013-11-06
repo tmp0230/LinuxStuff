@@ -16,9 +16,12 @@
 [alias]
     plogs = log --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
     plog = log --max-count=3 --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
+    rlogs = "!bash -c 'git fetch && git plogs remotes/origin/master'"
+    rlog = "!bash -c 'git fetch && git plog remotes/origin/master'"
     flog = log -p --graph\n --color --graph
     st = status
     pl = pull
     ci = commit -am
     co = checkout
     fdiff = diff --name-status
+    rdiff = "!bash -c 'git fetch && git diff master remotes/origin/master'"
