@@ -15,9 +15,10 @@ alias ll='ls -lthr --color=always -NF'
 alias l='ls -lthr --color=always -NF'
 alias l.='ls -d .* --color=always'
 
-alias sp='cd /home/marslo/scm/tex/src/spec'
-alias gi='cd /cygdrive/c/Marslo/Tools/Git'
 alias up="cd $HOME"
+alias gi="cd $HOME/../../Marslo/Tools/Git/Github"
+alias rs="cd $HOME/../../Marslo/Study/Codes/Rails"
+alias desk="cd $HOME/Desktop"
 
 alias is='irb --simple-prompt'
 alias ff=firefox
