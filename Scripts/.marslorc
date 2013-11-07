@@ -7,6 +7,42 @@ function bello()
         export TERM='xterm-color'
     fi
 
-    export PATH=$HOME/Marslo/.vim/tools/bin:$PATH
-    source $HOME/Marslo/.alias_marslo
+    # For Public account server
+    # export PATH=$HOME/Marslo/.vim/tools/bin:$PATH
+    # source $HOME/Marslo/.alias_marslo_public
+
+    # For private account server
+    # source $HOME/.alias_marslo_linux
+
+    # Color for ManPage
+    export LESS_TERMCAP_mb=$(printf "\e[1;31m").
+    export LESS_TERMCAP_md=$(printf "\e[1;31m").
+    export LESS_TERMCAP_me=$(printf "\e[0m").
+    export LESS_TERMCAP_se=$(printf "\e[0m").
+    export LESS_TERMCAP_so=$(printf "\e[1;44;33m").
+    export LESS_TERMCAP_ue=$(printf "\e[0m").
+    export LESS_TERMCAP_us=$(printf "\e[1;32m").
+
+}
+
+# For git diff
+# Inspired from http://stackoverflow.com/questions/8259851/using-git-diff-how-can-i-get-added-and-modified-lines-numbers
+function diff-lines() {
+    local path=
+    local line=
+    while read; do
+        esc=$'\033'
+        if [[ $REPLY =~ ---\ (a/)?.* ]]; then
+            continue
+        elif [[ $REPLY =~ \+\+\+\ (b/)?([^[:blank:]$esc]+).* ]]; then
+            path=${BASH_REMATCH[2]}
+        elif [[ $REPLY =~ @@\ -[0-9]+(,[0-9]+)?\ \+([0-9]+)(,[0-9]+)?\ @@.* ]]; then
+            line=${BASH_REMATCH[2]}
+        elif [[ $REPLY =~ ^($esc\[[0-9;]+m)*([\ +-]) ]]; then
+            echo "$path:$line:$REPLY"
+            if [[ ${BASH_REMATCH[2]} != - ]]; then
+                ((line++))
+            fi
+        fi
+    done
 }
