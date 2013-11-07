@@ -3,6 +3,8 @@
 	email = marslo.jiao@gmail.com
 [push]
 	default = matching
+[diff]
+    rename = copy
 [color]
     diff = always
     log = always
@@ -11,8 +13,11 @@
     push = always
     pull = always
     branch = always
+	ui = on
 [core]
 	editor = vim
+[pager]
+    diff = diff-lines | less
 [alias]
     st = status
     pl = pull
@@ -24,8 +29,8 @@
     flog = log -p --graph\n --color --graph
 
     fdiff = diff --name-status
-    # ldiff = "!bash -c 'git diff -U0' | diff-lines"
-    ldiff = diff -U0
+    ldiff = !bash -c 'git diff -U0 "$@"' | diff-lines
+    # ldiff = diff -U0
     wdiff = diff --color-words -U0
 
     rlogs = "!bash -c 'git fetch && git plogs remotes/origin/master'"
