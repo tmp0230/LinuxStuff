@@ -26,7 +26,7 @@ function bello()
 }
 
 # For git diff
-# Inspired from http://stackoverflow.com/questions/8259851/using-git-diff-how-can-i-get-added-and-modified-lines-numbers
+# Inspired from http://stackoverflow.com/questions/8259851/using-git-diff-how-can-i-get-added-and-modified-lines-numbers/12179492#12179492
 function diff-lines() {
     local path=
     local line=
