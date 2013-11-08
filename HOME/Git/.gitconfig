@@ -38,3 +38,5 @@
     rlogs = "!bash -c 'git fetch && git plogs remotes/origin/master'"
     rlog = "!bash -c 'git fetch && git plog remotes/origin/master'"
     rdiff = "!bash -c 'git fetch && git ldiff master remotes/origin/master'"
+
+    info = !bash -l -c 'gitinfo'
