@@ -21,6 +21,7 @@ alias rs='cd /home/marslo/Study/Rails'
 alias gi='cd /home/marslo/Tools/Git'
 alias fl='cd /home/marslo/Study/Rails/The1stMode/first'
 alias bdc='cd /home/marslo/Study/Rails/Laurentium/trunk/smarthome/rails3-bootstrap-devise-cancan_1'
+alias mcc='cd /home/marslo/Study/Rails/MyRails/mycancan'
 
 alias subl='/home/marslo/Tools/Editor/Sublime2/sublime_text'
 alias sublime='/home/marslo/Tools/Editor/Sublime2/sublime_text'
@@ -47,5 +48,6 @@ PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 
 
 export PATH=/home/mika/software/bin:$PATH
 export DISPLAY=WW2002855.ap.tieto.com:0.0
-export PATH=$PATH:/home/marslo/Tools/NodeJS/bin:/home/marslo/Tools/Bins
+export PATH=$PATH:/home/marslo/Tools/NodeJS/bin
+# export PATH=$PATH:/home/marslo/Tools/Bins
 export PATH=/home/marslo/.vim/tools/vim74/bin:$PATH
