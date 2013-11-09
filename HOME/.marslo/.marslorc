@@ -2,15 +2,17 @@
 # Disable it while using common account in public server
 source ~/.marslo/.alias_marslo_common
 
+# Set terminal color
+if [ -e /usr/share/terminfo/x/xterm-256color ];
+then
+    export TERM='xterm-256color'
+else
+    export TERM='xterm-color'
+fi
+
 # For public server (use common account)
 function bello()
 {
-    if [ -e /usr/share/terminfo/x/xterm-256color ];
-    then
-        export TERM='xterm-256color'
-    else
-        export TERM='xterm-color'
-    fi
 
     # For Public account server
     export PATH=$HOME/Marslo/.vim/tools/bin:$PATH
