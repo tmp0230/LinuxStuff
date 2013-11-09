@@ -8,25 +8,27 @@ Email: marslo.jiao@gmail.com
 Created: 2013-10-07 21:43:42  
 Version: 0.0.3  
 LastChange: 2013-11-09 09:50:24  
-History:  
-- 0.0.1 | Marslo | init  
-- 0.0.2 | Marslo | Add the information for moc building  
+History:
+- 0.0.1 | Marslo | init
+- 0.0.2 | Marslo | Add the information for moc building
 - 0.0.3 | Marslo | Update .gitconfig and .marslorc
 
 ## HOME config usage:
-- Add the following statement in `.bashrc` or `/etc/bashrc`(RHEL/CentOS) or `/etc/bash.bashrc`(Ubunut) :
+- Add the following statement in `.bashrc` or `/etc/bashrc`(RHEL/CentOS) or `/etc/bash.bashrc`(Ubuntu) :
 <pre><code>source <Path_To_.marslo>/.marslo/.marslorc
-source <Path_To_.marslo>/.marslo/.alias_marslo[_ubuntu/_cgwin/_linux/_ubuntu/_server]
+source <Path_To_.marslo>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/server]
 </code></pre>
 - inputrc:
-    - Add the **.inputrc** in `$HOME`
+    - Copy the **.inputrc** in `$HOME`
+    <pre><code>cp HOME/.inputrc ~
+    </code></pre>
 - The vim in github:
 <pre><code>$ git clone git@github.com:b4winckler/vim.git
 </code></pre>
 
 ## Git alias config:
 - Copy `.gitconfig` to `$HOME`
-<pre><code>cp Home/Git/.gitconfig ~
+<pre><code>cp HOME/Git/.gitconfig ~
 </code></pre>
 - And make sure the `.marslorc`(.marslo/.marslorc) file sourced in `.bashrc`. Otherwise, `$ git ldiff` and `$git info` not available.
 
