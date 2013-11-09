@@ -21,34 +21,13 @@ alias l='ls -lthrNF --color=always'
 alias la='ls -althrNF --color=always'
 alias l.='ls -d .* --color=always' 
 
+alias c='clear'
+alias ff=firefox
 alias uh='du -h --max-depth=1 --exclude='\./\.*''
 alias ud='du -h --max-depth=1'
-alias c='clear'
-alias vnccreate='vncserver :99 -name marslo -geometry 1280x1024'
-
-alias ff=firefox
-alias gi='cd /home/marslo/Tools/Git'
-alias ru='cd /home/marslo/Study/Codes/Ruby'
-
-# alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
-alias which='alias | /bin/which -a'
-alias ro='ssh -oStrictHostKeyChecking=no -oCheckHostIP=no root@localhost'
-alias or='`stty -echo`; /usr/bin/expect $HOME/.exp; `stty echo `'
-
-alias is='irb --simple-prompt'
-alias ipy='ipython qtconsole --IPythonWidget.font_size=12 --IPythonWidget.font_family=Monaco --color=linux --style=marslo'
-alias nau='nautilus'
-alias sublime='sublime-text-2'
-alias pdf='evince'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 alias shutdown='sudo shutdown -h now'
 alias reboot='sudo shutdown -r now'
-
-# Mysql startup and shutdown
-alias startmysql='sudo service mysql start'
-alias restartmysql='sudo service mysql restart'
-alias stopmysql='sudo service mysql stop'
-alias lmsq='mysql -u marslo -p --auto-rehash'
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Prompt: [USERNAME@HOSTNAME PATH]
 export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;32m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"

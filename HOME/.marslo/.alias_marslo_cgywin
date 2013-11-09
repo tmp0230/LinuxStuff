@@ -1,0 +1,25 @@
+alias up="cd $HOME"
+alias gi="cd $HOME/../../Marslo/Tools/Git/Github"
+alias rs="cd $HOME/../../Marslo/Study/Codes/Rails"
+alias desk="cd $HOME/Desktop"
+
+alias is='irb --simple-prompt'
+alias gitinfo='source /cygdrive/c/Users/jiaoolii/.gitinfo'
+alias exp='explorer.exe .'
+
+alias vim='/bin/vim.exe'
+alias vnccreate='vncserver :99 -name marslo -geometry 1280x1024'
+
+alias mpp='ssh mpp@10.9.137.13'
+alias rodachu='ssh root@10.9.137.11'
+alias azrod='ssh mpp@10.9.137.9'
+alias tex='ssh tex@10.9.137.13'
+alias at='ssh auto@10.121.122.56'
+alias mika='ssh mika@10.121.122.56'
+alias marslo='ssh marslo@10.121.122.56'
+alias dev01='ssh lijiao@texdev01'
+alias dev02='ssh lijiao@texdev02'
+
+export RUBYOPT=rubygems
+export SSH_ENV=$HOME/.ssh/environment
+export PATH="/cygdrive/c/Program Files (x86)/Vim/vim74":$PATH

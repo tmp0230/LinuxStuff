@@ -1,3 +1,6 @@
+# aliases
+source .alias_marslo_common
+
 function bello()
 {
     if [ -e /usr/share/terminfo/x/xterm-256color ];
@@ -13,16 +16,6 @@ function bello()
 
     # For private account server
     # source $HOME/.alias_marslo_linux
-
-    # Color for ManPage
-    export LESS_TERMCAP_mb=$(printf "\e[1;31m").
-    export LESS_TERMCAP_md=$(printf "\e[1;31m").
-    export LESS_TERMCAP_me=$(printf "\e[0m").
-    export LESS_TERMCAP_se=$(printf "\e[0m").
-    export LESS_TERMCAP_so=$(printf "\e[1;44;33m").
-    export LESS_TERMCAP_ue=$(printf "\e[0m").
-    export LESS_TERMCAP_us=$(printf "\e[1;32m").
-
 }
 
 # For git diff

@@ -1,0 +1,25 @@
+alias mec='cd /home/marslo/Study/Ruby/Mechanize'
+alias mf='cd /home/marslo/Study/MakeFile'
+alias sp='cd /home/marslo/scm/tex/src/spec'
+alias li='cd /opt/tex/lib'
+alias rs='cd /home/marslo/Study/Rails'
+alias gi='cd /home/marslo/Tools/Git'
+
+alias subl='/home/marslo/Tools/Editor/Sublime2/sublime_text'
+alias sublime='/home/marslo/Tools/Editor/Sublime2/sublime_text'
+alias is='irb --simple-prompt'
+alias vnccreate="vncserver $1 -name marslo -geometry 1280x1024"
+alias lmsq='mysql --auto-rehash -u root -p'
+
+alias mpp='ssh mpp@10.9.137.13'
+alias rodachu='ssh root@10.9.137.11'
+alias azrod='ssh mpp@10.9.137.9'
+alias tex='ssh tex@10.9.137.13'
+alias at='ssh auto@10.121.122.56'
+alias mika='ssh mika@10.121.122.56'
+
+export PATH=/home/mika/software/bin:$PATH
+export PATH=$PATH:/home/marslo/Tools/NodeJS/bin:/home/marslo/Tools/Bins
+export PATH=/home/marslo/.vim/tools/vim74/bin:$PATH
+
+export DISPLAY=WW2002855.ap.tieto.com:0.0

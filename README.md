@@ -15,7 +15,7 @@ History:
 
 ## HOME config usage:
 - Add the following statement in `.bashrc` or `/etc/bashrc`(RHEL/CentOS) or `/etc/bash.bashrc`(Ubunut) :
-<pre><code>source PATH_OF_alias_marslo/.alias_marslo[_ubuntu]/.al
+<pre><code>source <ALIAS_PATH>/.alias_marslo[_ubuntu/_cgwin/_linux/_ubuntu/_server]
 </code></pre>
 - inputrc:
     Add the **.inputrc** in `$HOME`
