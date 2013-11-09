@@ -1,6 +1,6 @@
 # aliases
 # Disable it while using common account in public server
-source .alias_marslo_common
+source ~/.marslo/.alias_marslo_common
 
 # For public server (use common account)
 function bello()
@@ -14,7 +14,7 @@ function bello()
 
     # For Public account server
     export PATH=$HOME/Marslo/.vim/tools/bin:$PATH
-    source $HOME/Marslo/.marslo/.marslorc
+    source $HOME/Marslo/.marslo/.alias_marslo_common
     source $HOME/Marslo/.marslo/.alias_marslo_public
 
     # For private account server
