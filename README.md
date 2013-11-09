@@ -15,8 +15,8 @@ History:
 
 ## HOME config usage:
 - Add the following statement in `.bashrc` or `/etc/bashrc`(RHEL/CentOS) or `/etc/bash.bashrc`(Ubuntu) :
-<pre><code>source <Path_To_.marslo>/.marslo/.marslorc
-source <Path_To_.marslo>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/server]
+<pre><code>source \<Path_To_.marslo\>/.marslo/.marslorc
+source \<Path_To_.marslo\>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/server]
 </code></pre>
 - inputrc:
     - Copy the **.inputrc** in `$HOME`
