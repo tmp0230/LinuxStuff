@@ -1,8 +1,8 @@
 [user]
-	name = Marslo
-	email = marslo.jiao@gmail.com
+    name = Marslo
+    email = marslo.jiao@gmail.com
 [push]
-	default = matching
+    default = matching
 [diff]
     rename = copy
 [color]
@@ -13,7 +13,7 @@
     push = always
     pull = always
     branch = always
-	ui = on
+    ui = on
 [core]
 	editor = vim
 # [pager]
