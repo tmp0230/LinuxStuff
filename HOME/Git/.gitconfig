@@ -32,8 +32,8 @@
 
     fdiff = diff --name-status
     wdiff = diff --color-words -U0
-    ldiff = !bash -l -c 'git diff -U0 "$@" | diff-lines' -
-    # ldiff = !bash -c '. ~/.marslorc && git diff -U0 "$@" | diff-lines' -
+    # ldiff = !bash -l -c 'git diff -U0 "$@" | diff-lines' -
+    ldiff = !bash -c '. ~/.marslorc && git diff -U0 "$@" | diff-lines' -
     # ldiff = diff -U0
 
     rlogs = "!bash -c 'git fetch && git plogs remotes/origin/master'"
