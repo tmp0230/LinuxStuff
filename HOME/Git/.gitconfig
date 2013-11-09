@@ -20,6 +20,7 @@
     # Set the default diff like diff-lines
     # diff = diff-lines | less
 [alias]
+    add = add --all
     st = status
     pl = pull
     ci = commit -am
