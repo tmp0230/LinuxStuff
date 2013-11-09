@@ -1,20 +1,21 @@
 LinuxStuff
 ==========
-The config and scripts in Linux
+The configs and scripts in Linux
 
 ## Version:
 Author: Marslo  
 Email: marslo.jiao@gmail.com  
 Created: 2013-10-07 21:43:42  
-Version: 0.0.2  
-LastChange: 2013-11-07 03:21:38  
+Version: 0.0.3  
+LastChange: 2013-11-09 09:50:24  
 History:  
         0.0.1 | Marslo | init  
         0.0.2 | Marslo | Add the information for moc building  
+        0.0.3 | Marslo | Update .gitconfig and .marslorc
 
 ## HOME config usage:
 - Add the following statement in `.bashrc` or `/etc/bashrc`(RHEL/CentOS) or `/etc/bash.bashrc`(Ubunut) :
-<pre><code>source PATH_OF_alias_marslo/.alias_marslo[_ubuntu]
+<pre><code>source PATH_OF_alias_marslo/.alias_marslo[_ubuntu]/.al
 </code></pre>
 - inputrc:
     Add the **.inputrc** in `$HOME`
