@@ -19,7 +19,7 @@ History:
 source <Path_To_.marslo>/.marslo/.alias_marslo[_ubuntu/_cgwin/_linux/_ubuntu/_server]
 </code></pre>
 - inputrc:
-    Add the **.inputrc** in `$HOME`
+    - Add the **.inputrc** in `$HOME`
 - The vim in github:
 <pre><code>$ git clone git@github.com:b4winckler/vim.git
 </code></pre>
