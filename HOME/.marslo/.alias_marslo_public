@@ -1,0 +1,23 @@
+alias saas='cd /home/mika/Marslo/Study/Rails/Laurentium/trunk/projects/rails-recurly-subscription-saas_1'
+alias rs='cd /home/mika/Marslo/Study/Rails'
+alias gi='cd /home/mika/Marslo/Git'
+alias bdc='cd /home/mika/Marslo/Study/Rails/Laurentium/trunk/smarthome/rails3-bootstrap-devise-cancan_1'
+alias gl='cd /home/mika/Marslo/Git/The1stMode/first'
+
+alias subl='/home/mika/TOOLS/SublimeText2/sublime_text'
+alias sublime='/home/mika/TOOLS/SublimeText2/sublime_text'
+
+
+alias vim='vim -u ~/Marslo/.vimrc'
+alias is='irb --simple-prompt'
+alias psj='ps -elf | grep "java.*jar.*jenkins" | grep -v grep'
+alias lmsq='mysql --auto-rehash -u root -p'
+alias vnccreate='vncserver :99 -name marslo -geometry 1280x1024'
+
+alias mpp='ssh mpp@10.9.137.13'
+alias rodachu='ssh root@10.9.137.11'
+alias azrod='ssh mpp@10.9.137.9'
+alias tex='ssh marslo@10.121.122.24'
+
+export DISPLAY=WW2002855.ap.tieto.com:0.0
+export PATH=$PATH:/home/mika/Marslo/Tools/BeyondCompare/bin

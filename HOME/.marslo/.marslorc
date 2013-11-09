@@ -1,6 +1,8 @@
 # aliases
+# Disable it while using common account in public server
 source .alias_marslo_common
 
+# For public server (use common account)
 function bello()
 {
     if [ -e /usr/share/terminfo/x/xterm-256color ];
@@ -11,8 +13,9 @@ function bello()
     fi
 
     # For Public account server
-    # export PATH=$HOME/Marslo/.vim/tools/bin:$PATH
-    # source $HOME/Marslo/.alias_marslo_public
+    export PATH=$HOME/Marslo/.vim/tools/bin:$PATH
+    source $HOME/Marslo/.marslo/.marslorc
+    source $HOME/Marslo/.marslo/.alias_marslo_public
 
     # For private account server
     # source $HOME/.alias_marslo_linux
