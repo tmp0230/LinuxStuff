@@ -1,0 +1,68 @@
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+alias cx='chmod u+x'
+alias c='clear'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias d='cd -'
+alias dc=cd
+
+alias grep='grep -i --color=auto'
+alias egrep='egrep -i --color=auto'
+
+alias ls='ls -NF --color=always'
+alias l='ls -lthrNF --color=always'
+alias la='ls -althrNF --color=always'
+alias l.='ls -d .* --color=always' 
+
+alias c='clear'
+alias ff=firefox
+alias uh='du -h --max-depth=1 --exclude='\./\.*''
+alias ud='du -h --max-depth=1'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+alias shutdown='sudo shutdown -h now'
+alias reboot='sudo shutdown -r now'
+
+alias up="cd $HOME"
+alias gi="cd $HOME/../../Marslo/Tools/Git/Github"
+alias rs="cd $HOME/../../Marslo/Study/Codes/Rails"
+alias desk="cd $HOME/Desktop"
+
+alias is='irb --simple-prompt'
+alias gitinfo='source /cygdrive/c/Users/jiaoolii/.gitinfo'
+alias exp='explorer.exe .'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+alias vim='/bin/vim.exe'
+alias vnccreate='vncserver :99 -name marslo -geometry 1280x1024'
+
+# Add -tt to force pseudo-tty allocation even if stdin isn't a terminal
+alias mpp='ssh -tt mpp@10.9.137.13'
+alias rodachu='ssh -tt root@10.9.137.11'
+alias azrod='ssh -tt mpp@10.9.137.9'
+alias tex='ssh -tt tex@10.9.137.13'
+alias at='ssh -tt auto@10.121.122.56'
+alias mika='ssh -tt mika@10.121.122.56'
+alias marslo='ssh -tt marslo@10.121.122.56'
+alias dev01='ssh -tt lijiao@texdev01'
+alias dev02='ssh -tt lijiao@texdev02'
+
+export RUBYOPT=rubygems
+export SSH_ENV=$HOME/.ssh/environment
+export PATH="/cygdrive/c/Program Files (x86)/Vim/vim74":$PATH
+
+export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"
+
+export LESS_TERMCAP_mb=$(printf "\e[1;31m")         # begin blinding
+export LESS_TERMCAP_md=$(printf "\e[1;31m")         # begin bold
+export LESS_TERMCAP_me=$(printf "\e[0m")            # end mode
+export LESS_TERMCAP_se=$(printf "\e[0m")            # end stadout-mode
+export LESS_TERMCAP_so=$(printf "\e[1;44;33m")      # begin stadout-mode - info box
+export LESS_TERMCAP_ue=$(printf "\e[0m")            # end underline
+export LESS_TERMCAP_us=$(printf "\e[1;32m")         # begin underline
+
+export HISTCONTROL=erasedups
+export HISTCONTROL=ignoredups
+export HISTTIMEFORMAT='%F %T '
