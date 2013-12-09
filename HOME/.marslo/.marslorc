@@ -22,7 +22,7 @@ function bello()
     # For Public account server
     export PATH=$HOME/Marslo/.vim/tools/bin:$PATH
     source $HOME/Marslo/.marslo/.alias_marslo_common
-    source $HOME/Marslo/.marslo/dev/.alias_marslo_public
+    source $HOME/Marslo/.marslo/.dev/.alias_marslo_public
 
     # For private account server
     # source $HOME/.alias_marslo_linux
