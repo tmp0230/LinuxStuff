@@ -1,0 +1,9 @@
+alias rs='cd $HOME/Study/Rails'
+alias gi='cd $HOME/Tools/Git'
+
+alias subl='/home/marslo/Tools/Editor/Sublime2/sublime_text'
+alias sublime='/home/marslo/Tools/Editor/Sublime2/sublime_text'
+alias is='irb --simple-prompt'
+alias lmsq='mysql --auto-rehash -u root -p'
+
+export PATH=/home/marslo/.vim/tools/vim74/bin:$PATH
