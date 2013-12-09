@@ -22,6 +22,7 @@ alias azrod='ssh mpp@10.9.137.9'
 alias tex='ssh tex@10.9.137.13'
 alias at='ssh auto@10.121.122.56'
 alias mika='ssh mika@10.121.122.56'
+alias lsg='ssh marslo@121.199.21.62'
 
 export PATH=/home/mika/software/bin:$PATH
 export DISPLAY=WW2002855.ap.tieto.com:0.0
