@@ -7,8 +7,9 @@ alias gl='cd /home/mika/Marslo/Git/The1stMode/first'
 alias subl='/home/mika/TOOLS/SublimeText2/sublime_text'
 alias sublime='/home/mika/TOOLS/SublimeText2/sublime_text'
 
-
 alias vim='vim -u ~/Marslo/.vimrc'
+alias vimdiff='vimdiff -u ~/Marslo/.vimrc'
+
 alias is='irb --simple-prompt'
 alias psj='ps -elf | grep "java.*jar.*jenkins" | grep -v grep'
 alias lmsq='mysql --auto-rehash -u root -p'
