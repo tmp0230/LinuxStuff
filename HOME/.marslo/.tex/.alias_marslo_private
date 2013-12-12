@@ -1,0 +1,15 @@
+alias is='irb --simple-prompt'
+alias dev01='ssh lijiao@texdev01'
+alias dev02='ssh lijiao@texdev02'
+alias tre1='ssh root@tex-proxy-tre1'
+
+alias ro='ssh -oStrictHostKeyChecking=no -oCheckHostIP=no root@localhost'
+alias or='`stty -echo`; /usr/bin/expect /home/lijiao/.marslo/.exp; `stty echo `'
+
+alias texpy='/opt/tex/lib/python/python-2.7.3/bin/python'
+alias pa='cd /home/lijiao/Packages/myprodcut-testcases/task/package'
+alias sr='cd /home/lijiao/scm/tex/src/'
+alias sp='cd /home/lijiao/scm/tex/src/spec/'
+alias ts='cd /home/lijiao/Tasks'
+
+alias vnccreate="vncserver $1 -name marslo -geometry 1280x1024"
