@@ -7,14 +7,18 @@ alias gi='cd /home/marslo/Tools/Git'
 alias fl='cd /home/marslo/Study/Rails/The1stMode/first'
 alias bdc='cd /home/marslo/Study/Rails/Laurentium/trunk/smarthome/rails3-bootstrap-devise-cancan_1'
 alias mcc='cd /home/marslo/Study/Rails/MyRails/mycancan'
+alias sdt='cd /home/marslo/Study/Rails/self-driven-travel'
 
 alias subl='/home/marslo/Tools/Editor/Sublime2/sublime_text'
 alias sublime='/home/marslo/Tools/Editor/Sublime2/sublime_text'
 alias is='irb --simple-prompt'
 
 alias vnccreate="vncserver $1 -name marslo -geometry 1280x1024"
+alias vncmarslo="vncserver  -name marslo -geometry 1250x1000 :99"
 alias lmsq='mysql --auto-rehash -u root -p'
-alias rafi='rails server -p 3001'
+alias 3001='rails server -p 3001'
+alias 3002='rails server -p 3002'
+alias 3003='rails server -p 3003'
 
 alias mpp='ssh mpp@10.9.137.13'
 alias rodachu='ssh root@10.9.137.11'
