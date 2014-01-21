@@ -7,7 +7,7 @@ color   title-blur              242     233
 color   delimiter               213     default
 color   author                  156     default
 color   date                    92      default
-color   line-number             221     default
+color   line-number             238     default
 color   mode                    255     default
 
 # main
@@ -30,7 +30,7 @@ color   diff_add2               10      default
 color   diff_del                196     default
 color   diff_del2               196     default
 color   diff-header             221     default
-color   diff-index              81      default
+color   diff-index              63      default
 color   diff-chunk              213     default
 color   diff_oldmode            221     default
 color   diff_newmode            221     default
@@ -41,8 +41,8 @@ color   diff_rename_from        221     default
 color   diff_rename_to          221     default
 color   diff_similarity         221     default
 color   diff_dissimilarity      221     default
-color   diff_tree               81      default
-color   diff-stat               81      default
+color   diff_tree               63      default
+color   diff-stat               63      default
 color   "Reported-by:"          156     default
 
 color   pp-author               156     default
