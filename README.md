@@ -224,8 +224,10 @@ Command: /sbin/alsactl restore
         </code></pre>
 
 ##Screenshot
-#BASH
+### BASH
 ![BASH](https://github.com/Marslo/LinuxStuff/blob/master/Screenshots/BASH_Screenshot.png?raw=true)
-#MAN Page
+
+### MAN Page
 ![MAN_PAGE](https://github.com/Marslo/LinuxStuff/blob/master/Screenshots/Colorful_ManPage_Screenshot.png?raw=true)
+### tig
 ![tig](https://github.com/Marslo/LinuxStuff/blob/master/Screenshots/tig.png?raw=true)
