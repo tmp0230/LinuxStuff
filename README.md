@@ -3,15 +3,15 @@ LinuxStuff
 The configs and scripts in Linux
 
 ## Version:
-Author: Marslo  
-Email: marslo.jiao@gmail.com  
-Created: 2013-10-07 21:43:42  
-Version: 0.0.3  
-LastChange: 2013-11-09 09:50:24  
-History:
-- 0.0.1 | Marslo | init
-- 0.0.2 | Marslo | Add the information for moc building
-- 0.0.3 | Marslo | Update .gitconfig and .marslorc
+- Author: Marslo
+- Email: marslo.jiao@gmail.com
+- Created: 2013-10-07 21:43:42
+- Version: 0.0.3
+- LastChange: 2013-11-09 09:50:24
+- History:
+    - 0.0.1 | Marslo | init
+    - 0.0.2 | Marslo | Add the information for moc building
+    - 0.0.3 | Marslo | Update .gitconfig and .marslorc
 
 ## HOME config usage:
 - Add the following statement in `.bashrc` or `/etc/bashrc`(RHEL/CentOS) or `/etc/bash.bashrc`(Ubuntu) :
@@ -31,6 +31,21 @@ source \<Path_To_.marslo\>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/serv
 <pre><code>cp HOME/Git/.gitconfig ~
 </code></pre>
 - And make sure the `.marslorc`(.marslo/.marslorc) file sourced in `.bashrc`. Otherwise, `$ git ldiff` and `$git info` not available.
+
+## tig configure
+### Installation:
+- Ubuntu:
+<pre><code>$ sudo apt-get install tig</code></pre>
+
+- Install by manual:
+    - Download at [jonas/tig](https://github.com/jonas/tig)
+    - Build and install
+
+### Configuration
+- Copy **.tigrc** and **.tig/marslo.tigrc** to `$HOME` folder
+<pre><code>$ cp -r LinuxStuff/HOME/.tig* $HOME</code></pre>
+- Open tig, and enjoy it
+<pre><code>$ tig</code></pre>
 
 ## ALSA Settings:
 ### Informations
@@ -213,3 +228,4 @@ Command: /sbin/alsactl restore
 ![BASH](https://github.com/Marslo/LinuxStuff/blob/master/Screenshots/BASH_Screenshot.png?raw=true)
 #MAN Page
 ![MAN_PAGE](https://github.com/Marslo/LinuxStuff/blob/master/Screenshots/Colorful_ManPage_Screenshot.png?raw=true)
+![tig](https://github.com/Marslo/LinuxStuff/blob/master/Screenshots/tig.png?raw=true)
