@@ -1,7 +1,7 @@
 # aliases
 # Disable it while using common account in public server
-source ~/.marslo/.alias_marslo_common
-source ~/.marslo/.dev/.alias_marslo_private
+source /home/marslo/.marslo/.common_marslo
+source /home/marslo/.marslo/.ubuntu_marslo
 
 # Set terminal color
 # CentOS or RHEL
