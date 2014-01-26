@@ -1,44 +1,50 @@
 [user]
-    name = Marslo
-    email = marslo.jiao@gmail.com
+  name = Marslo
+  email = marslo.jiao@gmail.com
 [push]
-    default = matching
+  default = matching
 [diff]
-    rename = copy
+  rename = copy
+# Inspired from tpope: https://github.com/tpope/tpope/blob/master/.gitconfig
+[diff "ruby"]
+  funcname = "^ *\\(\\(def\\) .*\\)"
+[diff "image"]
+  textconv = identify
 [color]
-    diff = always
-    log = always
-    status = always
-    add = always
-    push = always
-    pull = always
-    branch = always
-    ui = on
+  diff = always
+  log = always
+  status = always
+  add = always
+  push = always
+  pull = always
+  branch = always
+  ui = on
+  interactive = auto
 [core]
 	editor = vim
 # [pager]
-    # Set the default diff like diff-lines
-    # diff = diff-lines | less
+  # Set the default diff like diff-lines
+  # diff = diff-lines | less
 [alias]
-    add = add --all
-    st = status
-    pl = pull
-    ci = commit -am
-    co = checkout
+  add = add --all
+  st = status
+  pl = pull
+  ci = commit -am
+  co = checkout
 
-    plogs = log --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
-    plog = log --max-count=3 --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
-    flog = log -p --graph\n --color --graph
+  plogs = log --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
+  plog = log --max-count=3 --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
+  flog = log -p --graph\n --color --graph
 
-    fdiff = diff --name-status
-    wdiff = diff --color-words -U0
-    # ldiff = !bash -l -c 'git diff -U0 "$@" | diff-lines' -
-    ldiff = !bash -c '. ~/.marslo/.marslorc && git diff -U0 "$@" | diff-lines' -
-    # ldiff = diff -U0
+  fd = diff --name-status
+  wd = diff --color-words -U0
+  # ld = !bash -l -c 'git diff -U0 "$@" | diff-lines' -
+  ld = !bash -c '. ~/.marslo/.marslorc && git diff -U0 "$@" | diff-lines' -
+  # ldiff = diff -U0
 
-    rlogs = "!bash -c 'git fetch && git plogs remotes/origin/master'"
-    rlog = "!bash -c 'git fetch && git plog remotes/origin/master'"
-    rdiff = "!bash -c 'git fetch && git ldiff master remotes/origin/master'"
+  rlogs = "!bash -c 'git fetch && git plogs remotes/origin/master'"
+  rlog = "!bash -c 'git fetch && git plog remotes/origin/master'"
+  rdiff = "!bash -c 'git fetch && git ld master remotes/origin/master'"
 
-    # info = !bash -l -c 'gitinfo'
-    info = !bash -c '. ~/.marslo/.marslorc && gitinfo'
+  # info = !bash -l -c 'gitinfo'
+  info = !bash -c '. ~/.marslo/.marslorc && gitinfo'

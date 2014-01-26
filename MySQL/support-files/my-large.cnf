@@ -1,8 +1,7 @@
-# Example MySQL config file for medium systems.
+# Example MySQL config file for large systems.
 #
-# This is for a system with little memory (32M - 64M) where MySQL plays
-# an important part, or systems up to 128M where MySQL is used together with
-# other programs (such as a web server)
+# This is for a large system with memory = 512M where the system runs mainly
+# MySQL.
 #
 # MySQL programs look for option files in a set of
 # locations which depend on the deployment platform.
@@ -24,19 +23,20 @@ socket		= /tmp/mysqld.sock
 
 # The MySQL server
 [mysqld]
-user = mysql
 port		= 3306
 socket		= /tmp/mysqld.sock
 skip-external-locking
-key_buffer_size = 16M
+key_buffer_size = 256M
 max_allowed_packet = 1M
-table_open_cache = 64
-sort_buffer_size = 512K
-net_buffer_length = 8K
-read_buffer_size = 256K
-read_rnd_buffer_size = 512K
-myisam_sort_buffer_size = 8M
-bind-address = 10.121.122.56
+table_open_cache = 256
+sort_buffer_size = 1M
+read_buffer_size = 1M
+read_rnd_buffer_size = 4M
+myisam_sort_buffer_size = 64M
+thread_cache_size = 8
+query_cache_size= 16M
+# Try number of CPU's*2 for thread_concurrency
+thread_concurrency = 8
 
 # Don't listen on a TCP/IP port at all. This can be a security enhancement,
 # if all processes that need to connect to mysqld run on the same host.
@@ -119,10 +119,10 @@ server-id	= 1
 #innodb_log_group_home_dir = /usr/local/mysql/data
 # You can set .._buffer_pool_size up to 50 - 80 %
 # of RAM but beware of setting memory usage too high
-#innodb_buffer_pool_size = 16M
-#innodb_additional_mem_pool_size = 2M
+#innodb_buffer_pool_size = 256M
+#innodb_additional_mem_pool_size = 20M
 # Set .._log_file_size to 25 % of buffer pool size
-#innodb_log_file_size = 5M
+#innodb_log_file_size = 64M
 #innodb_log_buffer_size = 8M
 #innodb_flush_log_at_trx_commit = 1
 #innodb_lock_wait_timeout = 50
@@ -132,14 +132,13 @@ quick
 max_allowed_packet = 16M
 
 [mysql]
-auto-rehash
-prompt="\\d > "
+no-auto-rehash
 # Remove the next comment character if you are not familiar with SQL
 #safe-updates
 
 [myisamchk]
-key_buffer_size = 20M
-sort_buffer_size = 20M
+key_buffer_size = 128M
+sort_buffer_size = 128M
 read_buffer = 2M
 write_buffer = 2M
 
