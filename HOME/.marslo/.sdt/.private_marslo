@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias rs='cd $HOME/Study/Rails'
 alias gi='cd $HOME/Tools/Git'
 
@@ -5,5 +7,9 @@ alias subl='/home/marslo/Tools/Editor/Sublime2/sublime_text'
 alias sublime='/home/marslo/Tools/Editor/Sublime2/sublime_text'
 alias is='irb --simple-prompt'
 alias lmsq='mysql --auto-rehash -u root -p'
+
+alias startd='sudo service mysqld start'
+alias stopd='sudo service mysqld stop'
+alias restartd='sudo service mysqld restart'
 
 export PATH=/home/marslo/.vim/tools/vim74/bin:$PATH

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # aliases
 # Disable it while using common account in public server
 source /home/marslo/.marslo/.common_marslo
@@ -22,8 +24,8 @@ function bello()
 
     # For Public account server
     export PATH=$HOME/Marslo/.vim/tools/bin:$PATH
-    source $HOME/Marslo/.marslo/.alias_marslo_common
-    source $HOME/Marslo/.marslo/.dev/.alias_marslo_public
+    source $HOME/Marslo/.marslo/.common_marslo
+    source $HOME/Marslo/.marslo/.dev/.public_marslo
 
     # For private account server
     # source $HOME/.alias_marslo_linux

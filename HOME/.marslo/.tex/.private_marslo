@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias is='irb --simple-prompt'
 alias dev01='ssh lijiao@texdev01'
 alias dev02='ssh lijiao@texdev02'

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias gi='cd /home/marslo/Tools/Git'
 alias ru='cd /home/marslo/Study/Codes/Ruby'
 alias rs='cd /home/marslo/Study/Codes/Rails'
