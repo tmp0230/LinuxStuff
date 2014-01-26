@@ -10,13 +10,16 @@ alias which='alias | /bin/which -a'
 alias ro='ssh -oStrictHostKeyChecking=no -oCheckHostIP=no root@localhost'
 alias or='`stty -echo`; /usr/bin/expect $HOME/.exp; `stty echo `'
 
-alias zju='ssh marslo@121.199.21.62'
+alias lsg='ssh marslo@121.199.21.62'
 
 alias is='irb --simple-prompt'
 alias ipy='ipython qtconsole --IPythonWidget.font_size=12 --IPythonWidget.font_family=Monaco --color=linux --style=marslo'
 alias nau='nautilus'
-alias sublime='sublime-text-2'
 alias pdf='evince'
+
+# Rails server
+alias 3001='rails server -p 3001'
+alias 3002='rails server -p 3002'
 
 # Mysql startup and shutdown
 alias startmysql='sudo service mysqld start'

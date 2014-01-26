@@ -47,6 +47,18 @@ source \<Path_To_.marslo\>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/serv
 - Open tig, and enjoy it
 <pre><code>$ tig</code></pre>
 
+## Konsole Configure
+### Installation:
+<pre><code>$ sudo apt-get install konsole</code></pre>
+
+### Restore the settings
+- Copy `<LinuxStuff>/HOME/Konsole` to `~/.kde/share/apps/konsole`
+    <pre><code>cp -r HOME/Konsole ~/.kde/share/apps/konsole</code></pre>
+
+### Shortcuts in Konsole:
+- `Alt + J`: Scroll Down one Line
+- `Alt + K`: Scroll Up one Line
+
 ## ALSA Settings:
 ### Informations
 - Check the **type** of Sound Card:
