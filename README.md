@@ -98,11 +98,11 @@ $ sudo apt-get autoremove
 - [Stackoverflow answers](http://askubuntu.com/questions/67758/how-can-i-deactivate-bluetooth-on-system-startup)
 
 ## Adjust Chinese Font
-<pre><code>$ cat /etc/fonts/conf.d/49-sansserif.conf
-....
-18       <string>WenQuanYi Micro Hei</string>
-....
-</code></pre>
+
+    $ cat /etc/fonts/conf.d/49-sansserif.conf
+    ....
+    18       <string>WenQuanYi Micro Hei</string>
+    ....
 
 ## Specified cursor
 <pre><code>$ cat /usr/share/icons/default/index.theme 
