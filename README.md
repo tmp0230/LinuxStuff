@@ -1,17 +1,18 @@
 LinuxStuff
 ==========
-The configs and scripts in Linux
+The configs and scripts in My Linux
 
 ## Version:
 - Author: Marslo
 - Email: marslo.jiao@gmail.com
 - Created: 2013-10-07 21:43:42
-- Version: 0.0.3
-- LastChange: 2013-11-09 09:50:24
+- Version: 0.0.4
+- LastChange: 2014-02-12 01:20:03
 - History:
     - 0.0.1 | Marslo | init
     - 0.0.2 | Marslo | Add the information for moc building
     - 0.0.3 | Marslo | Update .gitconfig and .marslorc
+    - 0.0.4 | Marslo | Add font, Bluetooth, Cursor configs
 
 ## HOME config usage:
 - Add the following statement in `.bashrc` or `/etc/bashrc`(RHEL/CentOS) or `/etc/bash.bashrc`(Ubuntu) :
@@ -20,7 +21,7 @@ source \<Path_To_.marslo\>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/serv
 </code></pre>
 - inputrc:
     - Copy the **.inputrc** in `$HOME`
-    <pre><code>cp HOME/.inputrc ~
+    <pre><code>cp Configs/HOME/.inputrc ~
     </code></pre>
 - The vim in github:
 <pre><code>$ git clone git@github.com:b4winckler/vim.git
@@ -28,7 +29,7 @@ source \<Path_To_.marslo\>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/serv
 
 ## Git alias config:
 - Copy `.gitconfig` to `$HOME`
-<pre><code>cp HOME/Git/.gitconfig ~
+<pre><code>cp Configs/HOME/Git/.gitconfig ~
 </code></pre>
 - And make sure the `.marslorc`(.marslo/.marslorc) file sourced in `.bashrc`. Otherwise, `$ git ldiff` and `$git info` not available.
 
@@ -43,7 +44,7 @@ source \<Path_To_.marslo\>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/serv
 
 ### Configuration
 - Copy **.tigrc** and **.tig/marslo.tigrc** to `$HOME` folder
-<pre><code>$ cp -r LinuxStuff/HOME/.tig* $HOME</code></pre>
+<pre><code>$ cp -r LinuxStuff/Configs/HOME/.tig* $HOME</code></pre>
 - Open tig, and enjoy it
 <pre><code>$ tig</code></pre>
 
@@ -52,12 +53,62 @@ source \<Path_To_.marslo\>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/serv
 <pre><code>$ sudo apt-get install konsole</code></pre>
 
 ### Restore the settings
-- Copy `<LinuxStuff>/HOME/Konsole` to `~/.kde/share/apps/konsole`
-    <pre><code>cp -r HOME/Konsole ~/.kde/share/apps/konsole</code></pre>
+- Copy `<LinuxStuff>/Configs/HOME/Konsole` to `~/.kde/share/apps/konsole`
+    <pre><code>cp -r Configs/HOME/Konsole ~/.kde/share/apps/konsole</code></pre>
 
 ### Shortcuts in Konsole:
 - `Alt + J`: Scroll Down one Line
 - `Alt + K`: Scroll Up one Line
+
+## Disable Bluetooth booting
+### To stop bluetooth service
+<pre><code>$ sudo service bluetooth stop</code></pre>
+
+### Disable bluetooth service on startup
+<pre><code>$ cat /etc/rc.local
+....
+# Turn off bluetooth
+rfkill block bluetooth
+
+exit 0
+</code></pre>
+
+### Disable the bluetooth driver on startup
+<pre><code>$ cat /etc/modprob.d/blacklist.conf
+....
+# Turn off bluetooth
+blacklist btusb
+</code></pre>
+
+### Cut power source for bluetooth to run
+<pre><code>cat /etc/bluetooth/main.conf
+...
+ 4 DisablePlugins = network,input
+...
+37 nitiallyPowered = false
+</code></pre>
+
+### [DANGEROUS]: REMOVE BLUETOOTH MANAGER AND ALL DEPENDENCIE
+<pre><code>$ sudo apt-get remove bluez* bluetooth
+$ sudo apt-get autoremove
+</code></pre>
+
+### Reference
+- [Nam Huy Linux Blog](http://namhuy.net/1397/disable-bluetooth-ubuntu-xubuntu-linux-mint.html)
+- [Stackoverflow answers](http://askubuntu.com/questions/67758/how-can-i-deactivate-bluetooth-on-system-startup)
+
+## Adjust Chinese Font
+<pre><code>$ cat /etc/fonts/conf.d/49-sansserif.conf
+....
+18       <string>WenQuanYi Micro Hei</string>
+....
+</code></pre>
+
+## Specified cursor
+<pre><code>$ cat /usr/share/icons/default/index.theme 
+[Icon Theme]
+Inherits=handhelds
+</code></pre>
 
 ## ALSA Settings:
 ### Informations
