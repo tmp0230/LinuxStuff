@@ -23,6 +23,9 @@ alias l='ls -lthrNF --color=always'
 alias la='ls -althrNF --color=always'
 alias l.='ls -d .* --color=always' 
 
+alias lvim="vim -c \"normal '0\""
+alias lgvim="gvim -c \"normal '0\""
+
 alias c='clear'
 alias ff=firefox
 alias uh='du -h --max-depth=1 --exclude='\./\.*''
