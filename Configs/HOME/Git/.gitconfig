@@ -33,9 +33,11 @@
   frag = magenta
   old = red bold
   new = green bold
+  whitespace = red reverse
 [core]
   editor = vim
   pager = more
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 # [pager]
   # Set the default diff like diff-lines
   # diff = diff-lines | less
