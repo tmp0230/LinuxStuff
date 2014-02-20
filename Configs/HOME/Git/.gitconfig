@@ -52,6 +52,8 @@
   plog = log --max-count=3 --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
   flog = log -p --graph\n --color --graph
 
+  pshow = show -s --pretty='format:%Cred%h%Creset %Cgreen(%s)%Creset'
+
   fd = diff --name-status
   wd = diff --color-words -U0
   # ld = !bash -l -c 'git diff -U0 "$@" | diff-lines' -
