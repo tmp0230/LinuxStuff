@@ -10,7 +10,7 @@ fi
 pushd $VIM_SRC
 
 git pull
-./configure --prefix=$HOME/.tools/vim74 --with-features=huge > vim-build.log
+./configure --prefix=$HOME/.tools/vim74 --enable-pythoninterp=yes --enable-python3interp=yes --enable-rubyinterp=yes --with-features=huge --with-compiledby=xjiaoli@msa > vim-build.log
 make -j3 >> vim-build.log
 make install >> vim-build.log
 
