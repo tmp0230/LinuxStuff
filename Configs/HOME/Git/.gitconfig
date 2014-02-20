@@ -21,8 +21,8 @@
   branch = always
   interactive = auto
 [core]
-	editor = vim
-	pager = more
+  editor = vim
+  pager = more
 # [pager]
   # Set the default diff like diff-lines
   # diff = diff-lines | less
@@ -49,6 +49,6 @@
 
   # info = !bash -l -c 'gitinfo'
   info = !bash -c '. ~/.marslo/.marslorc && gitinfo'
-	last = cat-file commit HEAD
+  last = cat-file commit HEAD
 
   # curbranch = "!bash -c 'git branch | grep \* | sed "s/\* \(.*\)/ (\1)/"'"
