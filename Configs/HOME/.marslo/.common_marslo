@@ -65,3 +65,5 @@ export LESS_TERMCAP_us=$(printf "\e[1;32m")         # begin underline
 export HISTCONTROL=erasedups
 export HISTCONTROL=ignoredups
 export HISTTIMEFORMAT='%F %T '
+
+export LESS="-eirMX"

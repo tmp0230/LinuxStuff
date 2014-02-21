@@ -9,26 +9,26 @@ source /home/marslo/.marslo/.ubuntu_marslo
 # CentOS or RHEL
 if [ -e /usr/share/terminfo/x/xterm-256color ];
 then
-    export TERM='xterm-256color'
+  export TERM='xterm-256color'
 # Ubuntu
 elif [ -e /lib/terminfo/x/xterm-256color ];
 then
-    export TERM='xterm-256color'
+  export TERM='xterm-256color'
 else
-    export TERM='xterm-color'
+  export TERM='xterm-color'
 fi
 
 # For public server (use common account)
 function bello()
 {
 
-    # For Public account server
-    export PATH=$HOME/Marslo/.vim/tools/bin:$PATH
-    source $HOME/Marslo/.marslo/.common_marslo
-    source $HOME/Marslo/.marslo/.dev/.public_marslo
+  # For Public account server
+  export PATH=$HOME/Marslo/.vim/tools/bin:$PATH
+  source $HOME/Marslo/.marslo/.common_marslo
+  source $HOME/Marslo/.marslo/.dev/.public_marslo
 
-    # For private account server
-    # source $HOME/.alias_marslo_linux
+  # For private account server
+  # source $HOME/.alias_marslo_linux
 }
 
 # For git diff
@@ -54,73 +54,72 @@ function diff-lines() {
 }
 
 
+# author: Duane Johnson
+# email: duane.johnson@gmail.com
+# date: 2008 Jun 12
+# license: MIT
+
+# Modified by Marslo
+# Email: marslo.vida@gmail.com
+# date: 2013-10-15 17:54:58
+
+# Based on discussion at http://kerneltrap.org/mailarchive/git/2007/11/12/406496
 # For get git infor
 function gitinfo() {
-    # author: Duane Johnson
-    # email: duane.johnson@gmail.com
-    # date: 2008 Jun 12
-    # license: MIT
+  pushd . >/dev/null
 
-    # Modified by Marslo
-    # Email: marslo.vida@gmail.com
-    # date: 2013-10-15 17:54:58
+  # Find base of git directory
+  while [ ! -d .git ] && [ ! `pwd` = "/" ]; do cd ..; done
 
-    # Based on discussion at http://kerneltrap.org/mailarchive/git/2007/11/12/406496
+  # Show various information about this git directory
+  if [ -d .git ]; then
+    echo "== Remote URL: "
+    git remote -v
+    echo
 
-    pushd . >/dev/null
+    echo "== Remote Branches: "
+    git branch -r
+    echo
 
-    # Find base of git directory
-    while [ ! -d .git ] && [ ! `pwd` = "/" ]; do cd ..; done
+    echo "== Local Branches:"
+    git branch
+    echo
 
-    # Show various information about this git directory
-    if [ -d .git ]; then
-        echo "== Remote URL: "
-        git remote -v
-        echo
+    echo "== Configuration (.git/config)"
+    cat .git/config
+    echo
 
-        echo "== Remote Branches: "
-        git branch -r
-        echo
+    echo "== Most Recent Commit"
+    git plog --max-count=3
+    echo
 
-        echo "== Local Branches:"
-        git branch
-        echo
+    echo "Type 'git plog', 'git plogs' and 'git log' for more commits, or 'git show' for full commit details."
+  else
+    echo "Not a git repository."
+  fi
 
-        echo "== Configuration (.git/config)"
-        cat .git/config
-        echo
-
-        echo "== Most Recent Commit"
-        git plog --max-count=3
-        echo
-
-        echo "Type 'git plog', 'git plogs' and 'git log' for more commits, or 'git show' for full commit details."
-    else
-        echo "Not a git repository."
-    fi
-
-    popd >/dev/null
+  popd >/dev/null
 }
 
 # For ssh agent
 # start the ssh-agent
 function start_agent {
-    echo "Initializing new SSH agent..."
-    # spawn ssh-agent
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
-    echo succeeded
-    chmod 600 ${SSH_ENV}
-    . ${SSH_ENV} > /dev/null
-    /usr/bin/ssh-add
+  echo "Initializing new SSH agent..."
+  # spawn ssh-agent
+  /usr/bin/ssh-agent | sed 's/^echo/#echo/' > ${SSH_ENV}
+  echo succeeded
+  chmod 600 ${SSH_ENV}
+  . ${SSH_ENV} > /dev/null
+  /usr/bin/ssh-add
 }
 
 function ssh_agent() {
-    if [ -f "${SSH_ENV}" ]; then
-         . ${SSH_ENV} > /dev/null
-         ps -ef | \grep ${SSH_AGENT_PID} | \grep ssh-agent$ > /dev/null || {
-            start_agent;
-        }
-    else
-        start_agent;
-    fi
+  if [ -f "${SSH_ENV}" ]; then
+    . ${SSH_ENV} > /dev/null
+    ps -ef | \grep ${SSH_AGENT_PID} | \grep ssh-agent$ > /dev/null || {
+    start_agent;
+  }
+  else
+    start_agent;
+  fi
 }
