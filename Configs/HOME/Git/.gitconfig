@@ -25,7 +25,7 @@
   local = yellow
   remote = red
 [color "status"]
-  added = green
+  added = yellow
   changed = red bold
   untracked = magenta normal dim
 [color "diff"]
@@ -64,6 +64,7 @@
   rlogs = "!bash -c 'git fetch && git plogs remotes/origin/master'"
   rlog = "!bash -c 'git fetch && git plog remotes/origin/master'"
   rdiff = "!bash -c 'git fetch && git ld master remotes/origin/master'"
+  ndiff =  git diff --name-only
 
   # info = !bash -l -c 'gitinfo'
   info = !bash -c '. ~/.marslo/.marslorc && gitinfo'
