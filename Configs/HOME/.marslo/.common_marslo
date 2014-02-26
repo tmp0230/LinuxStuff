@@ -13,6 +13,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias d='cd -'
 alias dc='cd $1'
+alias +='pushd .'
+alias -='popd'
 
 # Show colorful
 alias grep='grep -i --color=auto'
