@@ -24,6 +24,7 @@ alias ls='ls -NF --color=always'
 alias l='ls -lthrNF --color=always'
 alias la='ls -althrNF --color=always'
 alias l.='ls -d .* --color=always' 
+alias ld='\ls -ald */ --color=always'
 
 alias lvim="vim -c \"normal '0\""
 alias lgvim="gvim -c \"normal '0\""
