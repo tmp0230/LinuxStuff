@@ -34,23 +34,23 @@ function bello()
 # For git diff
 # Inspired from http://stackoverflow.com/questions/8259851/using-git-diff-how-can-i-get-added-and-modified-lines-numbers
 function diff-lines() {
-    local path=
-    local line=
-    while read; do
-        esc=$'\033'
-        if [[ $REPLY =~ ---\ (a/)?.* ]]; then
-            continue
-        elif [[ $REPLY =~ \+\+\+\ (b/)?([^[:blank:]$esc]+).* ]]; then
-            path=${BASH_REMATCH[2]}
-        elif [[ $REPLY =~ @@\ -[0-9]+(,[0-9]+)?\ \+([0-9]+)(,[0-9]+)?\ @@.* ]]; then
-            line=${BASH_REMATCH[2]}
-        elif [[ $REPLY =~ ^($esc\[[0-9;]+m)*([\ +-]) ]]; then
-            echo "$path:$line:$REPLY"
-            if [[ ${BASH_REMATCH[2]} != - ]]; then
-                ((line++))
-            fi
-        fi
-    done
+  local path=
+  local line=
+  while read; do
+    esc=$'\033'
+    if [[ $REPLY =~ ---\ (a/)?.* ]]; then
+      continue
+    elif [[ $REPLY =~ \+\+\+\ (b/)?([^[:blank:]$esc]+).* ]]; then
+      path=${BASH_REMATCH[2]}
+    elif [[ $REPLY =~ @@\ -[0-9]+(,[0-9]+)?\ \+([0-9]+)(,[0-9]+)?\ @@.* ]]; then
+      line=${BASH_REMATCH[2]}
+    elif [[ $REPLY =~ ^($esc\[[0-9;]+m)*([\ +-]) ]]; then
+      echo "$path:$line:$REPLY"
+      if [[ ${BASH_REMATCH[2]} != - ]]; then
+        ((line++))
+      fi
+    fi
+  done
 }
 
 
@@ -58,7 +58,6 @@ function diff-lines() {
 # email: duane.johnson@gmail.com
 # date: 2008 Jun 12
 # license: MIT
-
 # Modified by Marslo
 # Email: marslo.vida@gmail.com
 # date: 2013-10-15 17:54:58
@@ -97,8 +96,12 @@ function gitinfo() {
   else
     echo "Not a git repository."
   fi
-
   popd >/dev/null
+}
+
+function gbl()
+{
+  git for-each-ref --sort=-committerdate --format='%(committerdate) %(authorname) %(refname)' refs/remotes/origin/ | grep -e ".$@" | head -n 10;
 }
 
 # For ssh agent
