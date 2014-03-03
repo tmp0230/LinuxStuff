@@ -14,12 +14,13 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias d='cd -'
 alias dc='cd $1'
-alias +='pushd .'
-alias -='popd'
+alias -- +='pushd .'
+alias -- -='popd'
 
 # Show colorful
 alias grep='grep -i --color=auto'
 alias egrep='egrep -i --color=auto'
+alias h='history | grep $@'
 
 alias ls='ls -NF --color=always'
 alias l='ls -lthrNF --color=always'
@@ -35,7 +36,10 @@ alias c='clear'
 alias ff=firefox
 alias ud.='du -h --max-depth=1 --exclude='\./\.*''
 alias ud='du -h --max-depth=1'
+alias df='df -kTh'
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+
+alias ports='sudo netstat -tulanp | grep $@'
 alias shutdown='sudo shutdown -h now'
 alias reboot='sudo shutdown -r now'
 alias howold="sudo tune2fs -l $(df -h / |(read; awk '{print $1; exit}')) | grep -i created"

@@ -27,5 +27,10 @@ alias restartmysql='sudo service mysqld restart'
 alias stopmysql='sudo service mysqld stop'
 alias lmsq='mysql -u root -p --auto-rehash'
 
+alias acs='apt-cache search '
+alias agdu='apt-get update ; apt-get dist-upgrade'
+
 alias dstat='dstat -cdlmnpsy'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+export PATH=/home/marslo/.vim/tools/bin:$PATH
