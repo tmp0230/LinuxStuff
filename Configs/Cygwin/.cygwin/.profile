@@ -44,10 +44,12 @@ alias lgvim="gvim -c \"normal '0\""
 
 alias c='clear'
 alias ff=firefox
-alias ud='du -h --max-depth=1 --exclude='\./\.*''
-alias ud.='du -h --max-depth=1'
+alias ud.='du -h --max-depth=1 --exclude='\./\.*''
+alias ud='du -h --max-depth=1'
 alias df='df -kTh'
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+alias shutdown='sudo shutdown -h now'
+alias reboot='sudo shutdown -r now'
 
 # Prompt: [USERNAME@HOSTNAME PATH]
 export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"
