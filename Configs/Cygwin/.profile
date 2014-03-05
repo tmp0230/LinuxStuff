@@ -1,4 +1,16 @@
-#!/bin/bash
+export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"
+
+alias gvim="/cygdrive/c/Marslo/MyProgram/Vim/vim74/gvim.exe $@"
+alias dp='cygpath -d $PWD'
+
+alias up="cd $HOME"
+alias gi="cd $HOME/../../Marslo/Tools/Git"
+alias desk="cd $HOME/Desktop"
+alias msa="cd ../../Marslo/Job/MSA/git/"
+
+alias gitinfo='source /c/Users/xjiaoli/.gitinfo'
+alias exp='explorer.exe .'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 
 # Dangerous operation needs confirm
 alias rm='rm -i'
@@ -8,7 +20,6 @@ alias mv='mv -i'
 # Operation of files and directory
 alias cx='chmod u+x'
 alias c='clear'
-alias totalclear='clear;printf %b "\033[3J"'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -27,7 +38,6 @@ alias l='ls -lthrNF --color=always'
 alias la='ls -althrNF --color=always'
 alias l.='ls -d .* --color=always' 
 alias ld='\ls -Nald --color=always */'
-alias LS='find -mount -maxdepth 1 -printf "%.5m %10M %#9u:%-9g %#5U:%-5G %TF_%TR %CF_%CR %AF_%AR %#15s [%Y] %p\n" 2>/dev/null'
 
 alias lvim="vim -c \"normal '0\""
 alias lgvim="gvim -c \"normal '0\""
@@ -38,13 +48,6 @@ alias ud='du -h --max-depth=1 --exclude='\./\.*''
 alias ud.='du -h --max-depth=1'
 alias df='df -kTh'
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
-
-alias ports='netstat -tulanp | grep $@'
-alias shutdown='sudo shutdown -h now'
-alias reboot='sudo shutdown -r now'
-alias howold="sudo tune2fs -l $(df -h / |(read; awk '{print $1; exit}')) | grep -i created"
-alias showpath='echo -e ${PATH//:/\\n}'
-alias cmount='mount | column -t'
 
 # Prompt: [USERNAME@HOSTNAME PATH]
 export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"
