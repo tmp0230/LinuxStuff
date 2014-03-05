@@ -1,12 +1,14 @@
 export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"
 
 alias gvim="/cygdrive/c/Marslo/MyProgram/Vim/vim74/gvim.exe $@"
+alias vim="vim -u $HOME/.cygwin/.vimrc"
+alias vimdiff="vimdiff -u $HOME/.cygwin/.vimrc"
 alias dp='cygpath -d $PWD'
 
 alias up="cd $HOME"
 alias gi="cd $HOME/../../Marslo/Tools/Git"
 alias desk="cd $HOME/Desktop"
-alias msa="cd ../../Marslo/Job/MSA/git/"
+alias msa="cd $HOME/../../Marslo/Job/MSA/git/"
 
 alias gitinfo='source /c/Users/xjiaoli/.gitinfo'
 alias exp='explorer.exe .'
