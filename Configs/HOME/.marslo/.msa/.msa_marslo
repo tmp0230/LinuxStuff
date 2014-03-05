@@ -1,0 +1,28 @@
+#!/bin/bash
+
+alias mu='cd /proj/MSP/users'
+alias xj='cd /proj/MSP/users/xjiaoli'
+alias msa='cd /proj/MSP/users/xjiaoli/git/msa'
+alias gt='cd /proj/MSP/users/xjiaoli/git/msa/MSA/test/GebTest'
+alias sp='cd /proj/MSP/users/xjiaoli/git/msa/MSA/test/GebTest/src/test/groovy/specs'
+alias tm='cd /proj/MSP/team_M'
+
+alias idea='/proj/MSP/team_M/tools/idea-13/bin/idea.sh >/dev/null 2>&1 &'
+alias idea12='/proj/MSP/team_M/tools/idea/bin/idea.sh >/dev/null 2>&1 &'
+alias ge='gconf-editor'
+alias h='history | grep $@'
+alias terminal='/usr/bin/gnome-terminal --geometry=102x32+0+0'
+
+alias startsg='/etc/init.d/init.sges start'
+alias stopsg='/etc/init.d/init.sges stop'
+alias startmc='/etc/init.d/init.msacenter start'
+alias stopmc='/etc/init.d/init.msacenter stop'
+
+alias 50='ssh root@10.175.155.50'
+alias 75='ssh root@10.175.155.75'
+alias 81='ssh root@10.175.155.81'
+alias 82='ssh root@10.175.155.82'
+alias 83='ssh root@10.175.155.83'
+alias 84='ssh root@10.175.155.84'
+alias 3011='ssh xjiaoli@147.128.77.136'
+alias 3010='ssh xjiaoli@147.128.77.135'

@@ -39,10 +39,12 @@ alias ud='du -h --max-depth=1'
 alias df='df -kTh'
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 
-alias ports='sudo netstat -tulanp | grep $@'
+alias ports='netstat -tulanp | grep $@'
 alias shutdown='sudo shutdown -h now'
 alias reboot='sudo shutdown -r now'
 alias howold="sudo tune2fs -l $(df -h / |(read; awk '{print $1; exit}')) | grep -i created"
+alias showpath='echo -e ${PATH//:/\\n}'
+alias cmount='mount | column -t'
 
 # Prompt: [USERNAME@HOSTNAME PATH]
 export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"
