@@ -3,6 +3,7 @@ export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \
 alias gvim="/cygdrive/c/Marslo/MyProgram/Vim/vim74/gvim.exe $@"
 alias vim="vim -u $HOME/.cygwin/.vimrc"
 alias vimdiff="vimdiff -u $HOME/.cygwin/.vimrc"
+alias buildvim="make -f Make_cyg.mak IME=yes PYTHON=/cygdrive/c/Marslo/MyProgram/Python27 DYNAMIC_PYTHON=yes PYTHON_VER=27 FEATURES=HUGE"
 alias dp='cygpath -d $PWD'
 
 alias up="cd $HOME"
