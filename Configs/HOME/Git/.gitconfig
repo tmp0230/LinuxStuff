@@ -48,6 +48,7 @@
   ci = commit -am
   co = checkout
   br = branch
+  cl = clean -dfx
 
   plogs = log --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
   plog = log --max-count=3 --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative

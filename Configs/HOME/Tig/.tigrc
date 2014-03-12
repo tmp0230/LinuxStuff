@@ -4,12 +4,20 @@
 # Base configuration
 #
 # Syntax: set <option> = <value>
-set show-rev-graph = yes
-set show-date = relative
-set show-line-numbers = yes
-set show-id = yes
-set line-number-interval = 1
-set author-width = 8
+set show-rev-graph        = yes
+set show-date             = relative
+set show-line-numbers     = yes
+set show-id               = yes
+set line-number-interval  = 1
+set author-width          = 8
+set line-graphics         = ascii
+
+# Misc
+set read-git-colors		  = yes
+set ignore-case			  = yes
+set split-view-height	  = 67%
+set vertical-split		  = horizontal
+set editor-line-number	  = no
 
 #
 # Key configuration
