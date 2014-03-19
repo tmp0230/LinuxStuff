@@ -31,6 +31,22 @@ function bello()
   # source $HOME/.alias_marslo_linux
 }
 
+# Inspired from http://www.earthinfo.org/linux-disk-usage-sorted-by-size-and-human-readable/
+function udfs {
+  du -sk "$@" | sort -nr | while read size fname;
+  do
+    for unit in k M G T P E Z Y;
+    do
+      if [ $size -lt 1024 ];
+      then
+        echo -e "${size}${unit}\t${fname}";
+        break;
+      fi;
+      size=$((size/1024));
+    done;
+  done
+}
+
 # For git diff
 # Inspired from http://stackoverflow.com/questions/8259851/using-git-diff-how-can-i-get-added-and-modified-lines-numbers
 function diff-lines() {
