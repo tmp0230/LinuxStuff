@@ -39,10 +39,10 @@ LESS="${LESS-FRSX}"
 export LESS
 
 case "$GIT_PAGER" in
-    *["\$ 	'"]*)
-        exec /bin/sh -c "$GIT_PAGER "'"$@"' . "$@"
-        ;;
-    *)
-        exec "$GIT_PAGER" "$@"
-        ;;
+  *["\$ 	'"]*)
+    exec /bin/sh -c "$GIT_PAGER "'"$@"' . "$@"
+    ;;
+  *)
+    exec "$GIT_PAGER" "$@"
+    ;;
 esac
