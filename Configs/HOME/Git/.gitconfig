@@ -7,7 +7,7 @@
   rename = copy
 # Inspired from tpope: https://github.com/tpope/tpope/blob/master/.gitconfig
 [diff "ruby"]
-	funcname = \"^ */(/(def/) .*/)\"
+  funcname = \"^ */(/(def/) .*/)\"
 [diff "image"]
   textconv = identify
 [color]
@@ -37,7 +37,8 @@
 [core]
   editor = vim
   pager = more
-  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  autocrlf = input
 # [pager]
   # Set the default diff like diff-lines
   # diff = diff-lines | less
@@ -78,3 +79,6 @@
   task = grep -EI \"TODO|FIXME\"
 
   # curbranch = "!bash -c 'git branch | grep \* | sed "s/\* \(.*\)/ (\1)/"'"
+[gui]
+  recentrepo = C:/Marslo/Tools/Git/LinuxStuff
+  fontdiff = -family Consolas -size 11 -weight normal -slant roman -underline 0 -overstrike 0
