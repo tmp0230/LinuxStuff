@@ -61,9 +61,9 @@
   # ldiff = diff -U0
   
   ign = ls-files -o -i --exclude-standard
-  plogs = log --color --graph/n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'/n --abbrev-commit --date=relative
-  plog = log --max-count=3 --color --graph/n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'/n --abbrev-commit --date=relative
-  flog = log -p --graph/n --color --graph
+  plogs = log --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
+  plog = log --max-count=3 --color --graph\n --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'\n --abbrev-commit --date=relative
+  flog = log -p --graph\n --color --graph
   clog = log --color --graph --all --decorate --simplify-by-decoration --oneline
   pshow = show -s --pretty='format:%Cred%h%Creset %Cgreen(%s)%Creset'
 
