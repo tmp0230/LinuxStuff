@@ -142,3 +142,10 @@ function ssh_agent() {
     start_agent;
   fi
 }
+
+function pydict {
+  currentDir=`pwd`
+  cd ~/.vim/bundle/pydiction
+  python pydiction.py $@
+  cd $currentDir
+}
