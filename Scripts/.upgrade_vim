@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VIM_SRC=$(dirname $(readlink -f $0))/../../vim_src/
+VIM_SRC=$(dirname $(readlink -f $0))/vimsrc
 
 if [ ! -d "$VIM_SRC" ]; then
   echo "Bad VIM source path. Exit."
@@ -8,6 +8,9 @@ if [ ! -d "$VIM_SRC" ]; then
 fi
 
 pushd $VIM_SRC
+git clean -dfx
+make clean
+git checkout *
 
 git pull
 ./configure --prefix=$HOME/.tools/vim74 --enable-pythoninterp=yes --enable-python3interp=yes --enable-rubyinterp=yes --with-features=huge --with-compiledby=xjiaoli@msa > vim-build.log
