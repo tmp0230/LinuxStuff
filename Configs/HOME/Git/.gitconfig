@@ -7,7 +7,7 @@
   rename = copy
 # Inspired from tpope: https://github.com/tpope/tpope/blob/master/.gitconfig
 [diff "ruby"]
-  funcname = \"^ */(/(def/) .*/)\"
+	funcname = \"^ */(/(def/) .*/)\"
 [diff "image"]
   textconv = identify
 [color]
@@ -49,10 +49,12 @@
   ci = commit -am
   co = checkout
   br = branch
+  bra = branch -a
   cl = clean -dfx
   sb = show-branch
   cb = rev-parse --abbrev-ref HEAD
   wc = whatchanged
+  gca = gc --aggressive
 
   fd = diff --name-status
   wd = diff --color-words -U0
