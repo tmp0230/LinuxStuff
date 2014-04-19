@@ -108,6 +108,12 @@ $ sudo apt-get autoremove
 
     $ sudo apt-get install indicator-multiload
 
+## Install Ubuntu theme
+
+    $ sudo add-apt-repository ppa:noobslab/themessudo
+    $ sudo apt-get update
+    $ sudo apt-get install nokto-theme
+
 ## Specified cursor
 <pre><code>$ cat /usr/share/icons/default/index.theme 
 [Icon Theme]
