@@ -1,4 +1,4 @@
-LinuxStuff
+Linux Stuff
 ==========
 The configs and scripts in My Linux
 
@@ -103,6 +103,10 @@ $ sudo apt-get autoremove
     ....
     18       <string>WenQuanYi Micro Hei</string>
     ....
+
+## Install System Monitor Indicator
+
+    $ sudo apt-get install indicator-multiload
 
 ## Specified cursor
 <pre><code>$ cat /usr/share/icons/default/index.theme 
