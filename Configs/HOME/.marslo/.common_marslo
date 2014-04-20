@@ -46,8 +46,9 @@ alias howold="sudo tune2fs -l $(df -h / |(read; awk '{print $1; exit}')) | grep 
 alias showpath='echo -e ${PATH//:/\\n}'
 alias cmount='mount | column -t'
 
-# ┌(USERNAME@HOSTNAME)-(JOB)-(TIME)->
-# └-(PATH)-(JOBINFORMATION)-->
+# ┌-(USERNAME@HOSTNAME PATH) ->
+# └-$
+
 DARK='\e[0;30m'
 DRED='\e[0;31m'
 DGREEN='\e[0;32m'
@@ -67,9 +68,9 @@ COLRESET='\e[0m'
 
 if [ `sudo fgconsole` -gt 6 ]
 then
-  export PS1="\n\[\033[30;1m\]\[\033(0\]l\[\033(B\](\[\033[34;1m\]\u@\h\[\033[30;1m\])-(\[\033[34;1m\]\j\[\033[30;1m\])-(\[\033[34;1m\]\@ \d\[\033[30;1m\])->\[\033[30;1m\]\n\[\033(0\]m\[\033(B\]-(\[\033[32;1m\]\w\[\033[30;1m\])-(\[\033[32;1m\]\$(/bin/ls -1 | /usr/bin/wc -l | /bin/sed 's: ::g') files, \$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')b\[\033[30;1m\])--> \[\033[0m\]"
+  export PS1="\n\[\033[30;1m\]\[\033(0\]l\[\033(B\]-(\u@\h \[\033[31;1m\]\w\[\033[30;1m\]) ->\n\[\033(0\]m\[\033(B\]-\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\033[0m\]"
 else
-  export PS1="\n\[\033[30;1m\]\[\016\]l\[\017\](\[\033[34;1m\]\u@\h\[\033[30;1m\])-(\[\033[34;1m\]\j\[\033[30;1m\])-(\[\033[34;1m\]\@ \d\[\033[30;1m\])->\[\033[30;1m\]\n\[\016\]m\[\017\]-(\[\033[32;1m\]\w\[\033[30;1m\])-(\[\033[32;1m\]\$(/bin/ls -1 | /usr/bin/wc -l | /bin/sed 's: ::g') files, \$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')b\[\033[30;1m\])--> \[\033[0m\]"
+  export PS1="\n\[\033[30;1m\]\[\016\]l\[\017\]-(\u@\h \[\033[31;1m\]\w\[\033[30;1m\]) ->\n\[\016\]m\[\017\]-\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\033[0m\]"
 fi
 
 # [USERNAME@HOSTNAME PATH]
