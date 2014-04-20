@@ -22,11 +22,11 @@ alias grep='grep -i --color=auto'
 alias egrep='egrep -i --color=auto'
 alias h='history | grep $@'
 
+alias ld='\ls -Nald --color=always */'
 alias ls='ls -NF --color=always'
 alias l='ls -lthrNF --color=always'
 alias la='ls -althrNF --color=always'
-alias l.='ls -d .* --color=always' 
-alias ld='\ls -Nald --color=always */'
+alias l.='ls -d .* --color=always'
 alias LS='find -mount -maxdepth 1 -printf "%.5m %10M %#9u:%-9g %#5U:%-5G %TF_%TR %CF_%CR %AF_%AR %#15s [%Y] %p\n" 2>/dev/null'
 
 alias lvim="vim -c \"normal '0\""
@@ -34,23 +34,47 @@ alias lgvim="gvim -c \"normal '0\""
 
 alias c='clear'
 alias ff=firefox
-alias ud='du -h --max-depth=1 --exclude='\./\.*''
 alias ud.='du -h --max-depth=1'
+alias ud='du -h --max-depth=1 --exclude='\./\.*''
 alias df='df -kTh'
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 
-alias ports='netstat -tulanp | grep $@'
+alias ports='sudo netstat -tulanp | grep $@'
 alias shutdown='sudo shutdown -h now'
 alias reboot='sudo shutdown -r now'
 alias howold="sudo tune2fs -l $(df -h / |(read; awk '{print $1; exit}')) | grep -i created"
 alias showpath='echo -e ${PATH//:/\\n}'
 alias cmount='mount | column -t'
 
-# Prompt: [USERNAME@HOSTNAME PATH]
-export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"
+# ┌(USERNAME@HOSTNAME)-(JOB)-(TIME)->
+# └-(PATH)-(JOBINFORMATION)-->
+DARK='\e[0;30m'
+DRED='\e[0;31m'
+DGREEN='\e[0;32m'
+DYELLOW='\e[0;33m'
+DBLUE='\e[0;34m'
+DPURPLE='\e[0;35m'
+DCYAN='\e[0;36m'
+DWHITE='\e[0;37m'
+LRED='\e[1;31m'
+LGREEN='\e[1;32m'
+LYELLOW='\e[1;33m'
+LBLUE='\e[1;34m'
+LPURPLE='\e[1;35m'
+LCYAN='\e[1;36m'
+LWHITE='\e[1;37m'
+COLRESET='\e[0m'
+
+if [ `sudo fgconsole` -gt 6 ]
+then
+  export PS1="\n\[\033[30;1m\]\[\033(0\]l\[\033(B\](\[\033[34;1m\]\u@\h\[\033[30;1m\])-(\[\033[34;1m\]\j\[\033[30;1m\])-(\[\033[34;1m\]\@ \d\[\033[30;1m\])->\[\033[30;1m\]\n\[\033(0\]m\[\033(B\]-(\[\033[32;1m\]\w\[\033[30;1m\])-(\[\033[32;1m\]\$(/bin/ls -1 | /usr/bin/wc -l | /bin/sed 's: ::g') files, \$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')b\[\033[30;1m\])--> \[\033[0m\]"
+else
+  export PS1="\n\[\033[30;1m\]\[\016\]l\[\017\](\[\033[34;1m\]\u@\h\[\033[30;1m\])-(\[\033[34;1m\]\j\[\033[30;1m\])-(\[\033[34;1m\]\@ \d\[\033[30;1m\])->\[\033[30;1m\]\n\[\016\]m\[\017\]-(\[\033[32;1m\]\w\[\033[30;1m\])-(\[\033[32;1m\]\$(/bin/ls -1 | /usr/bin/wc -l | /bin/sed 's: ::g') files, \$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')b\[\033[30;1m\])--> \[\033[0m\]"
+fi
 
 # [USERNAME@HOSTNAME PATH]
 # $
+#   export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"
 #   PS1='\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\$ \[\e[0m\]'
 #   PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;32m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"
 #   PS1="\[\e[1;34m\]\u@\h \[\e[1;31m\]\w\[\e[1;30m\]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;32m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"
