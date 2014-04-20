@@ -14,6 +14,21 @@ The configs and scripts in My Linux
     - 0.0.3 | Marslo | Update .gitconfig and .marslorc
     - 0.0.4 | Marslo | Add font, Bluetooth, Cursor configs
 
+## Content
+    - [Configurations](https://github.com/Marslo/LinuxStuff#configurations)
+        - [HOME Configuration](https://github.com/Marslo/LinuxStuff#home-config-usage)
+        - [Git Alias](https://github.com/Marslo/LinuxStuff#git-alias)
+        - [Tig](https://github.com/Marslo/LinuxStuff#git-alias)
+        - [Konsole](https://github.com/Marslo/LinuxStuff#konsole)
+    - [Settings](https://github.com/Marslo/LinuxStuff#settings)
+        - [Chinese Font](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+        - [System Monitor](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+        - [Ubuntu Theme](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+        - [Cursor](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+        - [Disable Bluetooth](https://github.com/Marslo/LinuxStuff#disable-bluetooth-booting)
+        - [ALSA](https://github.com/Marslo/LinuxStuff#alsa-settings)
+    - [Moc stuff](https://github.com/Marslo/LinuxStuff#build-and-install-moc-music-on-console-by-source-code)
+
 ## Configurations
 ### HOME config usage:
 - Add the following statement in `.bashrc` or `/etc/bashrc`(RHEL/CentOS) or `/etc/bash.bashrc`(Ubuntu) :
@@ -49,7 +64,7 @@ source \<Path_To_.marslo\>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/serv
 - Open tig, and enjoy it
 <pre><code>$ tig</code></pre>
 
-### Konsole Configure
+### Konsole
 #### Installation:
 <pre><code>$ sudo apt-get install konsole</code></pre>
 
