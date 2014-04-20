@@ -15,19 +15,19 @@ The configs and scripts in My Linux
     - 0.0.4 | Marslo | Add font, Bluetooth, Cursor configs
 
 ## Content
-    - [Configurations](https://github.com/Marslo/LinuxStuff#configurations)
-        - [HOME Configuration](https://github.com/Marslo/LinuxStuff#home-config-usage)
-        - [Git Alias](https://github.com/Marslo/LinuxStuff#git-alias)
-        - [Tig](https://github.com/Marslo/LinuxStuff#git-alias)
-        - [Konsole](https://github.com/Marslo/LinuxStuff#konsole)
-    - [Settings](https://github.com/Marslo/LinuxStuff#settings)
-        - [Chinese Font](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
-        - [System Monitor](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
-        - [Ubuntu Theme](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
-        - [Cursor](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
-        - [Disable Bluetooth](https://github.com/Marslo/LinuxStuff#disable-bluetooth-booting)
-        - [ALSA](https://github.com/Marslo/LinuxStuff#alsa-settings)
-    - [Moc stuff](https://github.com/Marslo/LinuxStuff#build-and-install-moc-music-on-console-by-source-code)
+- [Configurations](https://github.com/Marslo/LinuxStuff#configurations)
+    - [HOME Configuration](https://github.com/Marslo/LinuxStuff#home-config-usage)
+    - [Git Alias](https://github.com/Marslo/LinuxStuff#git-alias)
+    - [Tig](https://github.com/Marslo/LinuxStuff#git-alias)
+    - [Konsole](https://github.com/Marslo/LinuxStuff#konsole)
+- [Settings](https://github.com/Marslo/LinuxStuff#settings)
+    - [Chinese Font](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+    - [System Monitor](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+    - [Ubuntu Theme](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+    - [Cursor](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+    - [Disable Bluetooth](https://github.com/Marslo/LinuxStuff#disable-bluetooth-booting)
+    - [ALSA](https://github.com/Marslo/LinuxStuff#alsa-settings)
+- [Moc stuff](https://github.com/Marslo/LinuxStuff#build-and-install-moc-music-on-console-by-source-code)
 
 ## Configurations
 ### HOME config usage:
