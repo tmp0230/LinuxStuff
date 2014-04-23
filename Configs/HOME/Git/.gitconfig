@@ -84,3 +84,6 @@
 [gui]
   recentrepo = C:/Marslo/Tools/Git/LinuxStuff
   fontdiff = -family Consolas -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+[http]
+  proxy = http://tefipx.tieto.com:8080
+  # proxy = http://www-proxy.ericsson.se:8080
