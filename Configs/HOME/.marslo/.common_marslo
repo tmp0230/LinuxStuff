@@ -63,8 +63,8 @@ LCYAN='\e[1;36m'
 LWHITE='\e[1;37m'
 COLRESET='\e[0m'
 
-# ┌─(USERNAME@HOSTNAME PATH) ->
-# └─$
+# ┌─ (USERNAME@HOSTNAME PATH) ->
+# └─ $
 if [ `sudo fgconsole` -gt 6 ]
 then
   export PS1="\n\[\033[30;1m\]\[\033(0\]l\[\033(B\]\[\033(0\]q\[\033(B\] (\u@\h \[\033[31;1m\]\w\[\033[30;1m\]) ->\n\[\033(0\]m\[\033(B\]\[\033(0\]q\[\033(B\] \`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\033[0m\]"
