@@ -21,6 +21,7 @@ alias -- -='popd'
 alias grep='grep -i --color=auto'
 alias egrep='egrep -i --color=auto'
 alias h='history | grep $@'
+alias his='history'
 
 alias ls='ls -NF --color=always'
 alias l='ls -lthrNF --color=always'
@@ -31,12 +32,18 @@ alias LS='find -mount -maxdepth 1 -printf "%.5m %10M %#9u:%-9g %#5U:%-5G %TF_%TR
 
 alias lvim="vim -c \"normal '0\""
 alias lgvim="gvim -c \"normal '0\""
+alias tig="tig 2> /dev/null"
 
 alias c='clear'
 alias ff=firefox
 alias ud='du -h --max-depth=1 --exclude='\./\.*''
 alias ud.='du -h --max-depth=1'
+alias udf='du -skh'
+alias uds='du --block-size=MiB --max-depth=1 --exclude='\./\.*' | sort -nr'
+alias uds.='du --block-size=MiB --max-depth=1 | sort -nr'
 alias df='df -kTh'
+# alias ssh='ssh -o "StrictHostKeyChecking no"'
+alias ssh='ssh -o StrictHostKeyChecking=no'
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 
 alias ports='netstat -tulanp | grep $@'
@@ -48,6 +55,7 @@ alias cmount='mount | column -t'
 
 # Prompt: [USERNAME@HOSTNAME PATH]
 export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\`if [ \$? = 0 ]; then echo \[\e[1\;30m\]\\$\[\e[1m\]; else echo \[\e[1\;31m\]\\$\[\e[0m\]; fi\` \[\e[0;0m\]"
+# export PS1="\[\e[1;30m\][\u@\h \[\e[1;31m\]\w\[\e[1;30m\]]\n\[\e[1;30m\]\$(if [ \$? = 0 ]; then echo \[\e[1\;30m\]\$\[\e[1m\]; else echo \[\e[1\;31m\]\$\[\e[0m\]; fi ) \[\e[0;0m\]"
 
 # [USERNAME@HOSTNAME PATH]
 # $
