@@ -1,4 +1,4 @@
-LinuxStuff
+Linux Stuff
 ==========
 The configs and scripts in My Linux
 
@@ -14,7 +14,23 @@ The configs and scripts in My Linux
     - 0.0.3 | Marslo | Update .gitconfig and .marslorc
     - 0.0.4 | Marslo | Add font, Bluetooth, Cursor configs
 
-## HOME config usage:
+## Content
+- [Configurations](https://github.com/Marslo/LinuxStuff#configurations)
+    - [HOME Configuration](https://github.com/Marslo/LinuxStuff#home-config-usage)
+    - [Git Alias](https://github.com/Marslo/LinuxStuff#git-alias)
+    - [Tig](https://github.com/Marslo/LinuxStuff#git-alias)
+    - [Konsole](https://github.com/Marslo/LinuxStuff#konsole)
+- [Settings](https://github.com/Marslo/LinuxStuff#settings)
+    - [Chinese Font](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+    - [System Monitor](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+    - [Ubuntu Theme](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+    - [Cursor](https://github.com/Marslo/LinuxStuff#adjust-chinese-font)
+    - [Disable Bluetooth](https://github.com/Marslo/LinuxStuff#disable-bluetooth-booting)
+    - [ALSA](https://github.com/Marslo/LinuxStuff#alsa-settings)
+- [Moc stuff](https://github.com/Marslo/LinuxStuff#build-and-install-moc-music-on-console-by-source-code)
+
+## Configurations
+### HOME config usage:
 - Add the following statement in `.bashrc` or `/etc/bashrc`(RHEL/CentOS) or `/etc/bash.bashrc`(Ubuntu) :
 <pre><code>source \<Path_To_.marslo\>/.marslo/.marslorc
 source \<Path_To_.marslo\>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/server]
@@ -27,14 +43,14 @@ source \<Path_To_.marslo\>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/serv
 <pre><code>$ git clone git@github.com:b4winckler/vim.git
 </code></pre>
 
-## Git alias config:
+### Git alias
 - Copy `.gitconfig` to `$HOME`
 <pre><code>cp Configs/HOME/Git/.gitconfig ~
 </code></pre>
 - And make sure the `.marslorc`(.marslo/.marslorc) file sourced in `.bashrc`. Otherwise, `$ git ldiff` and `$git info` not available.
 
-## tig configure
-### Installation:
+### Tig
+#### Installation:
 - Ubuntu:
 <pre><code>$ sudo apt-get install tig</code></pre>
 
@@ -42,45 +58,68 @@ source \<Path_To_.marslo\>/.marslo/.alias_marslo_[ubuntu/cgwin/linux/ubuntu/serv
     - Download at [jonas/tig](https://github.com/jonas/tig)
     - Build and install
 
-### Configuration
+#### Configuration
 - Copy **.tigrc** and **.tig/marslo.tigrc** to `$HOME` folder
 <pre><code>$ cp -r LinuxStuff/Configs/HOME/.tig* $HOME</code></pre>
 - Open tig, and enjoy it
 <pre><code>$ tig</code></pre>
 
-## Konsole Configure
-### Installation:
+### Konsole
+#### Installation:
 <pre><code>$ sudo apt-get install konsole</code></pre>
 
-### Restore the settings
+#### Restore the settings
 - Copy `<LinuxStuff>/Configs/HOME/Konsole` to `~/.kde/share/apps/konsole`
     <pre><code>cp -r Configs/HOME/Konsole ~/.kde/share/apps/konsole</code></pre>
 
-### Shortcuts in Konsole:
+#### Shortcuts in Konsole:
 - `Alt + J`: Scroll Down one Line
 - `Alt + K`: Scroll Up one Line
 
-## Disable Bluetooth booting
-### To stop bluetooth service
+## Settings
+### Adjust Chinese Font
+
+    $ cat /etc/fonts/conf.d/49-sansserif.conf
+    ....
+    18       <string>WenQuanYi Micro Hei</string>
+    ....
+
+### Install System Monitor Indicator
+
+    $ sudo apt-get install indicator-multiload
+
+### Install Ubuntu theme
+
+    $ sudo add-apt-repository ppa:noobslab/themessudo
+    $ sudo apt-get update
+    $ sudo apt-get install nokto-theme
+
+### Specified cursor
+<pre><code>$ cat /usr/share/icons/default/index.theme 
+[Icon Theme]
+Inherits=handhelds
+</code></pre>
+
+### Disable Bluetooth booting
+#### To stop bluetooth service
 <pre><code>$ sudo service bluetooth stop</code></pre>
 
-### Disable bluetooth service on startup
+#### Disable bluetooth service on startup
 <pre><code>$ cat /etc/rc.local
 ....
 # Turn off bluetooth
 rfkill block bluetooth
-
 exit 0
 </code></pre>
 
-### Disable the bluetooth driver on startup
+#### Disable the bluetooth driver on startup
 <pre><code>$ cat /etc/modprob.d/blacklist.conf
 ....
 # Turn off bluetooth
 blacklist btusb
 </code></pre>
 
-### Cut power source for bluetooth to run
+#### Cut power source for bluetooth to run
 <pre><code>cat /etc/bluetooth/main.conf
 ...
  4 DisablePlugins = network,input
@@ -88,30 +127,17 @@ blacklist btusb
 37 nitiallyPowered = false
 </code></pre>
 
-### [DANGEROUS]: REMOVE BLUETOOTH MANAGER AND ALL DEPENDENCIE
+#### [DANGEROUS]: REMOVE BLUETOOTH MANAGER AND ALL DEPENDENCIE
 <pre><code>$ sudo apt-get remove bluez* bluetooth
 $ sudo apt-get autoremove
 </code></pre>
 
-### Reference
+#### Reference
 - [Nam Huy Linux Blog](http://namhuy.net/1397/disable-bluetooth-ubuntu-xubuntu-linux-mint.html)
 - [Stackoverflow answers](http://askubuntu.com/questions/67758/how-can-i-deactivate-bluetooth-on-system-startup)
 
-## Adjust Chinese Font
-
-    $ cat /etc/fonts/conf.d/49-sansserif.conf
-    ....
-    18       <string>WenQuanYi Micro Hei</string>
-    ....
-
-## Specified cursor
-<pre><code>$ cat /usr/share/icons/default/index.theme 
-[Icon Theme]
-Inherits=handhelds
-</code></pre>
-
-## ALSA Settings:
-### Informations
+### ALSA Settings:
+#### Informations
 - Check the **type** of Sound Card:
 <pre><code>$ head -1 /proc/asound/card0/codec#0
 Realtek ALC262
@@ -123,12 +149,12 @@ Advanced Linux Sound Archite chue Driver Version 1.0.24
 - Check the **configuration** about Sound Card
 <pre><code>$ vi /etc/modprobe.d/alsa-base.conf</code></pre>
 
-### Install extra libs (ubuntu 13.04)
+#### Install extra libs (ubuntu 13.04)
 <pre><code>$ sudo apt-get install build-essential ncurses-dev gettext  libncursesw5-dev
 $ sudo apt-get install xmlto
 </code></pre>
 
-### Update ALSA in Ubuntu (<= 12.10)
+#### Update ALSA in Ubuntu (<= 12.10)
 - Download **alsa driver**, **alsa lib** and **alsa utils**
 <pre><code>$ wget ftp://ftp.alsa-project.org/pub/driver/alsa-driver-1.0.25.tar.bz2
 $ wget ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.0.25.tar.bz2
@@ -162,7 +188,7 @@ $ sudo make install
 - Reboot
 <pre><code>$ sudo shutdown -r now </code></pre>
 
-### Change settings in Sound Card
+#### Change settings in Sound Card
 - Input `alsamixer`, and input **[F6]** to select sound card:
 <pre><code>$ alsamixer</code></pre>
 ![alsamixer](https://github.com/Marslo/LinuxStuff/blob/master/Screenshots/alsamixer.png?raw=true)
